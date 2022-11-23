@@ -1,0 +1,213 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# Automatically suggested patterns
+# hit-count: 491 file-count: 14
+# URL escaped characters
+\%[0-9A-F][A-F]
+
+# hit-count: 391 file-count: 141
+# w3
+\bw3\.org/[-0-9a-zA-Z/#.]+
+
+# hit-count: 328 file-count: 87
+# hex runs
+\b[0-9a-fA-F]{16,}\b
+
+# hit-count: 171 file-count: 54
+# version suffix <word>v#
+(?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
+
+# hit-count: 163 file-count: 13
+# Non-English
+[a-zA-Z]*[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3}[a-zA-ZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]*
+
+# hit-count: 157 file-count: 41
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+
+(?:\\u(?:[0-9a-f]{4}|[0-9A-F]{4}))+
+
+# hit-count: 109 file-count: 21
+# hex digits including css/html color classes:
+(?:[\\0][xX]|[uU]\+|#x?|\%23)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|u\d+)\b
+
+# hit-count: 58 file-count: 8
+# Update Lorem based on your content (requires `ge` and `w` from https://github.com/jsoref/spelling; and `review` from https://github.com/check-spelling/check-spelling/wiki/Looking-for-items-locally )
+# grep '^[^#].*lorem' .github/actions/spelling/patterns.txt|perl -pne 's/.*i..\?://;s/\).*//' |tr '|' "\n"|sort -f |xargs -n1 ge|perl -pne 's/^[^:]*://'|sort -u|w|sed -e 's/ .*//'|w|review -
+# Warning, while `(?i)` is very neat and fancy, if you have some binary files that aren't proper unicode, you might run into:
+## Operation "substitution (s///)" returns its argument for non-Unicode code point 0x1C19AE (the code point will vary).
+## You could manually change `(?i)X...` to use `[Xx]...`
+## or you could add the files to your `excludes` file (a version after 0.0.19 should identify the file path)
+# Lorem
+(?:\w|\s|[,.])*\b(?i)(?:amet|consectetur|cursus|dolor|eros|ipsum|lacus|libero|ligula|lorem|magna|neque|nulla|suscipit|tempus)\b(?:\w|\s|[,.])*
+
+# hit-count: 47 file-count: 29
+# Mastodon
+\bmastodon\.[-a-z.]*/(?:media/|\@)[?&=0-9a-zA-Z_]*
+
+# hit-count: 27 file-count: 26
+# data url in quotes
+([`'"])data:.*?(?:[A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,}).*\g{-1}
+
+# hit-count: 26 file-count: 25
+# data url
+data:[-a-zA-Z=;:/0-9+]*,\S*
+
+# hit-count: 25 file-count: 17
+# GitHub SHAs (markdown)
+(?:\[`?[0-9a-f]+`?\]\(https:/|)/(?:www\.|)github\.com(?:/[^/\s"]+){2,}(?:/[^/\s")]+)(?:[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+
+# hit-count: 18 file-count: 8
+# sha-... -- uses a fancy capture
+(['"]|&quot;)[0-9a-f]{40,}\g{-1}
+
+# hit-count: 17 file-count: 4
+# Punycode
+\bxn--[-0-9a-z]+
+
+# hit-count: 14 file-count: 4
+# magnet urls
+magnet:[?=:\w]+
+
+# hit-count: 12 file-count: 5
+# Twitter status
+\btwitter\.com/[^/\s"')]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)
+
+# hit-count: 11 file-count: 5
+# Wikipedia
+\ben\.wikipedia\.org/wiki/[-\w%.#]+
+
+# hit-count: 10 file-count: 6
+# mailto urls
+mailto:[-a-zA-Z=;:/?%&0-9+@.]{3,}
+
+# hit-count: 9 file-count: 4
+# data url in parens
+\(data:[^)]*?(?:[A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,})[^)]*\)
+
+# hit-count: 9 file-count: 4
+# While you could try to match `http://` and `https://` by using `s?` in `https?://`, sometimes there
+# YouTube url
+\b(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|user/|playlist\?list=|watch\?v=|v/|)[-a-zA-Z0-9?&=_%]*
+
+# hit-count: 6 file-count: 4
+# Slack
+\bslack\.com/[-0-9a-zA-Z/_~?&=.]*
+
+# hit-count: 6 file-count: 1
+# JavaScript regular expressions
+# javascript test regex
+/.*/[gim]*\.test\(
+
+# hit-count: 4 file-count: 1
+# javascript match regex
+\.match\(/[^/\s"]*/[gim]*\s*
+
+# hit-count: 3 file-count: 2
+# IPv6
+\b(?:[0-9a-fA-F]{0,4}:){3,7}[0-9a-fA-F]{0,4}\b
+
+# hit-count: 3 file-count: 2
+# French
+# This corpus only had capital letters, but you probably want lowercase ones as well.
+\b[LN]'+[a-z]{2,}\b
+
+# hit-count: 2 file-count: 2
+# hex in url queries
+=[0-9a-fA-F]*?(?:[A-F]{3,}|[a-f]{3,})[0-9a-fA-F]*?&
+
+# hit-count: 2 file-count: 1
+# Python stringprefix / binaryprefix
+# Note that there's a high false positive rate, remove the `?=` and search for the regex to see if the matches seem like reasonable strings
+(?<!')\b(?:B|BR|Br|F|FR|Fr|R|RB|RF|Rb|Rf|U|UR|Ur|b|bR|br|f|fR|fr|r|rB|rF|rb|rf|u|uR|ur)'(?:[A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,})
+
+# hit-count: 1 file-count: 1
+# cid urls
+(['"])cid:.*?\g{-1}
+
+# hit-count: 1 file-count: 1
+# The `\b` here means a break, it's the fancy way to handle urls, but it makes things harder to read
+# In this examples content, I'm using a number of different ways to match things to show various approaches
+# asciinema
+\basciinema\.org/a/[0-9a-zA-Z]+
+
+# hit-count: 1 file-count: 1
+# Google Fonts
+\bfonts\.(?:googleapis|gstatic)\.com/[-/?=:;+&0-9a-zA-Z]*
+
+# hit-count: 1 file-count: 1
+# stackexchange -- https://stackexchange.com/feeds/sites
+\b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/(?:questions/\w+/[-\w]+|a/)
+
+# hit-count: 1 file-count: 1
+# Twitter media
+\btwimg\.com/media/[-_\w./?=]*
+
+# hit-count: 1 file-count: 1
+# crypt
+"\$2[ayb]\$.{56}"
+
+# hit-count: 1 file-count: 1
+# javascript replace regex
+\.replace\(/[^/\s"]*/[gim]*\s*,
+
+# hit-count: 1 file-count: 1
+# sed regular expressions
+sed 's/(?:[^/]*?[a-zA-Z]{3,}[^/]*?/){2}
+
+data-sitekey="[^"]+"
+
+# blogspot
+\bblogspot\.com/[-\w/.]+
+
+# magnet
+"magnet:[^"]+"
+
+# pleroma
+\bpleroma\.com/[^"<>\\]+
+
+# amazonaws
+amazonaws\.com/[-\w/.%?=&#]+
+
+# peertube
+(?:%2F|\b)peertube\.stream[-\w/.#?&=%:+]+
+
+# atlasobscura.com
+\batlasobscura\.com/[-\w/.%]+
+
+"(?:blurhash|client_id|signatureValue)":\s*".*"
+"id": "\w+"
+(?:blurhash|client_id|oauth_token|token)" => ".*"
+api_key ".*"
+^\s{4,30}"[^"#/ ]{60,}",$
+data-(?:src|user)=\\?"[^"]+"
+(?:secret_key_base|signing_salt): ".*"
+"\$pbk[^"]+"
+"[-\w.]*/fixtures/[-\w./]*"
+(?:\.\w+|\})/(?:federation|notes|pictrs|preview|proxy|users)[/.][-\w/.?=#]+
+\bsrc=static/[-\w./]+
+BEGIN PUBLIC KEY.*END PUBLIC KEY
+
+# Questionably acceptable forms of `in to`
+# Personally, I prefer `log into`, but people object
+# https://www.tprteaching.com/log-into-log-in-to-login/
+\b[Ll]og in to\b
+
+# acceptable duplicates
+# ls directory listings
+[-bcdlpsw](?:[-r][-w][-sx]){3}\s+\d+\s+(\S+)\s+\g{-1}\s+\d+\s+
+# C types and repeated CSS values
+\s(Bar|center|div|first|inherit|long|LONG|none|normal|solid|thin|transparent|type|very|with)(?: \g{-1})+\s
+# go templates
+\s(\w+)\s+\g{-1}\s+\`(?:graphql|json|yaml):
+# javadoc / .net
+(?:[\\@](?:groupname|param)|(?:public|private)(?:\s+static|\s+readonly)*)\s+(\w+)\s+\g{-1}\s
+
+# Commit message -- Signed-off-by and friends
+^\s*(?:(?:Based-on-patch|Co-authored|Helped|Mentored|Reported|Reviewed|Signed-off)-by|Thanks-to): (?:[^<]*<[^>]*>|[^<]*)\s*$
+
+# Autogenerated revert commit message
+^This reverts commit [0-9a-f]{40}\.$
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
