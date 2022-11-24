@@ -2,7 +2,7 @@
 # Copyright © 2017-2022 Pleroma Authors <https://pleroma.social/>
 # SPDX-License-Identifier: AGPL-3.0-only
 
-defmodule Pleroma.Repo.Migrations.AddSecondObjectIndexToActivty do
+defmodule Pleroma.Repo.Migrations.AddSecondObjectIndexToActivity do
   use Ecto.Migration
 
   @disable_ddl_transaction true
