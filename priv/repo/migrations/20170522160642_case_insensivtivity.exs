@@ -2,7 +2,7 @@
 # Copyright © 2017-2022 Pleroma Authors <https://pleroma.social/>
 # SPDX-License-Identifier: AGPL-3.0-only
 
-defmodule Pleroma.Repo.Migrations.CaseInsensivtivity do
+defmodule Pleroma.Repo.Migrations.CaseInsensitivity do
   use Ecto.Migration
 
   # Two-steps alters are intentional.
