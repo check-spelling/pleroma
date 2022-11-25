@@ -1026,7 +1026,7 @@ config :pleroma, :config_description, [
       %{
         key: :direct_message,
         type: :keyword,
-        descpiption: "Direct message settings",
+        description: "Direct message settings",
         children: [
           %{
             key: :enabled,
@@ -1054,7 +1054,7 @@ config :pleroma, :config_description, [
       %{
         key: :chat_message,
         type: :keyword,
-        descpiption: "Chat message settings",
+        description: "Chat message settings",
         children: [
           %{
             key: :enabled,
@@ -1083,7 +1083,7 @@ config :pleroma, :config_description, [
       %{
         key: :email,
         type: :keyword,
-        descpiption: "Email message settings",
+        description: "Email message settings",
         children: [
           %{
             key: :enabled,
@@ -1507,7 +1507,7 @@ config :pleroma, :config_description, [
       %{
         key: :invalidation,
         type: :keyword,
-        descpiption: "",
+        description: "",
         suggestions: [
           enabled: true,
           provider: Pleroma.Web.MediaProxy.Invalidation.Script
@@ -2513,7 +2513,7 @@ config :pleroma, :config_description, [
         key: :shared_pack_cache_seconds_per_file,
         label: "Shared pack cache s/file",
         type: :integer,
-        descpiption:
+        description:
           "When an emoji pack is shared, the archive is created and cached in memory" <>
             " for this amount of seconds multiplied by the number of files.",
         suggestions: [60]
