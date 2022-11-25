@@ -3348,7 +3348,7 @@ config :pleroma, :config_description, [
       %{
         key: :purge_after_days,
         type: :integer,
-        description: "Remove backup achives after N days",
+        description: "Remove backup archives after N days",
         suggestions: [30]
       },
       %{

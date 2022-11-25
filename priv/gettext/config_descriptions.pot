@@ -3175,7 +3175,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 #: lib/pleroma/docs/translator.ex:5
 msgctxt "config description at :pleroma-Pleroma.User.Backup > :purge_after_days"
-msgid "Remove backup achives after N days"
+msgid "Remove backup archives after N days"
 msgstr ""
 
 #, elixir-autogen, elixir-format
