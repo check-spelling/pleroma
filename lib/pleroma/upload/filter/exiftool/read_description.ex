@@ -5,7 +5,7 @@
 defmodule Pleroma.Upload.Filter.Exiftool.ReadDescription do
   @moduledoc """
   Gets a valid description from the related EXIF tags and provides them in the response if no description is provided yet.
-  It will first check ImageDescription, when that doesn't probide a valid description, it will check iptc:Caption-Abstract.
+  It will first check ImageDescription, when that doesn't provide a valid description, it will check iptc:Caption-Abstract.
   A valid description means the fields are filled in and not too long (see `:instance, :description_limit`).
   """
   @behaviour Pleroma.Upload.Filter
