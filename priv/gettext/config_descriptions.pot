@@ -247,7 +247,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 #: lib/pleroma/docs/translator.ex:5
 msgctxt "config description at :pleroma-:mrf_hashtag"
-msgid "Reject, TWKN-remove or Set-Sensitive messsages with specific hashtags (without the leading #)\n\nNote: This MRF Policy is always enabled, if you want to disable it you have to set empty lists.\n"
+msgid "Reject, TWKN-remove or Set-Sensitive messages with specific hashtags (without the leading #)\n\nNote: This MRF Policy is always enabled, if you want to disable it you have to set empty lists.\n"
 msgstr ""
 
 #, elixir-autogen, elixir-format
