@@ -172,7 +172,7 @@ defmodule Pleroma.Config.DeprecationWarnings do
 
       ```
       config :pleroma, :mrf,
-        transparency_exclusions: [{"instance.tld", "Reason to exlude transparency"}]
+        transparency_exclusions: [{"instance.tld", "Reason to exclude transparency"}]
       ```
       """)
 
