@@ -1417,7 +1417,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 #: lib/pleroma/docs/translator.ex:5
 msgctxt "config description at :pleroma-:frontend_configurations > :pleroma_fe > :subjectLineBehavior"
-msgid "Allows changing the default behaviour of subject lines in replies.\n          `email`: copy and preprend re:, as in email,\n          `masto`: copy verbatim, as in Mastodon,\n          `noop`: don't copy the subject."
+msgid "Allows changing the default behaviour of subject lines in replies.\n          `email`: copy and prepend re:, as in email,\n          `masto`: copy verbatim, as in Mastodon,\n          `noop`: don't copy the subject."
 msgstr ""
 
 #, elixir-autogen, elixir-format
