@@ -250,7 +250,7 @@ defmodule Pleroma.Web.AdminAPI.AnnouncementControllerTest do
       assert NaiveDateTime.compare(announcement.ends_at, ends_at) == :eq
     end
 
-    test "creating with time with utc timezones", %{conn: conn} do
+    test "creating with time with utc time zones", %{conn: conn} do
       content = "test post announcement api"
 
       now = DateTime.now("Etc/UTC") |> elem(1) |> DateTime.truncate(:second)
