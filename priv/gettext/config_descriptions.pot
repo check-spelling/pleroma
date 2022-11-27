@@ -2449,7 +2449,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 #: lib/pleroma/docs/translator.ex:5
 msgctxt "config description at :pleroma-:pools > :default > :max_waiting"
-msgid "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errrors when a new request is made"
+msgid "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errors when a new request is made"
 msgstr ""
 
 #, elixir-autogen, elixir-format
@@ -2473,7 +2473,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 #: lib/pleroma/docs/translator.ex:5
 msgctxt "config description at :pleroma-:pools > :federation > :max_waiting"
-msgid "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errrors when a new request is made"
+msgid "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errors when a new request is made"
 msgstr ""
 
 #, elixir-autogen, elixir-format
@@ -2497,7 +2497,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 #: lib/pleroma/docs/translator.ex:5
 msgctxt "config description at :pleroma-:pools > :media > :max_waiting"
-msgid "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errrors when a new request is made"
+msgid "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errors when a new request is made"
 msgstr ""
 
 #, elixir-autogen, elixir-format
@@ -2521,7 +2521,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 #: lib/pleroma/docs/translator.ex:5
 msgctxt "config description at :pleroma-:pools > :upload > :max_waiting"
-msgid "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errrors when a new request is made"
+msgid "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errors when a new request is made"
 msgstr ""
 
 #, elixir-autogen, elixir-format
