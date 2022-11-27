@@ -125,7 +125,7 @@ defmodule Pleroma.Web.Plugs.SetLocalePlugTest do
     conn =
       :get
       |> conn("/cofe")
-      |> put_req_cookie(SetLocalePlug.frontend_language_cookie_name(), "x-nonexist")
+      |> put_req_cookie(SetLocalePlug.frontend_language_cookie_name(), "x-nonexistent")
       |> Conn.put_req_header(
         "accept-language",
         "ru, fr-CH, fr;q=0.9, en;q=0.8, *;q=0.5"
@@ -140,10 +140,10 @@ defmodule Pleroma.Web.Plugs.SetLocalePlugTest do
     conn =
       :get
       |> conn("/cofe")
-      |> put_req_cookie(SetLocalePlug.frontend_language_cookie_name(), "x-nonexist")
+      |> put_req_cookie(SetLocalePlug.frontend_language_cookie_name(), "x-nonexistent")
       |> Conn.put_req_header(
         "accept-language",
-        "x-nonexist"
+        "x-nonexistent"
       )
       |> SetLocalePlug.call([])
 
