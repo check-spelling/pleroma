@@ -1762,7 +1762,7 @@ defmodule Pleroma.Web.MastodonAPI.AccountControllerTest do
       assert %{language: "ru_RU"} = Pleroma.User.get_by_nickname("foo")
     end
 
-    test "createing an account without language parameter should fallback to cookie/header language",
+    test "creating an account without language parameter should fallback to cookie/header language",
          %{conn: conn} do
       params = %{
         username: "foo2",
