@@ -350,7 +350,7 @@ defmodule Pleroma.Web.TwitterAPI.UtilControllerTest do
         conn
         |> assign(:token, nil)
         |> put_req_header("content-type", "multipart/form-data")
-        |> post("/api/pleroma/change_email", %{password: "hi", email: "test@test.com"})
+        |> post("/api/pleroma/change_email", %{password: "hi", email: "test@example.com"})
 
       assert json_response_and_validate_schema(conn, 403) == %{
                "error" => "Insufficient permissions: write:accounts."
@@ -361,7 +361,7 @@ defmodule Pleroma.Web.TwitterAPI.UtilControllerTest do
       conn =
         conn
         |> put_req_header("content-type", "multipart/form-data")
-        |> post("/api/pleroma/change_email", %{password: "hi", email: "test@test.com"})
+        |> post("/api/pleroma/change_email", %{password: "hi", email: "test@example.com"})
 
       assert json_response_and_validate_schema(conn, 200) == %{"error" => "Invalid password."}
     end
