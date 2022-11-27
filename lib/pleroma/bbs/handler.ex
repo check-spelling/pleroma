@@ -92,7 +92,7 @@ defmodule Pleroma.BBS.Handler do
     IO.puts("r <id> <text> - Reply to the post with the given id")
     IO.puts("t <id> - Show a thread from the given id")
     IO.puts("n - Show notifications")
-    IO.puts("n read - Mark all notifactions as read")
+    IO.puts("n read - Mark all notifications as read")
     IO.puts("f <id> - Favourites the post with the given id")
     IO.puts("R <id> - Repeat the post with the given id")
     IO.puts("quit - Quit")
