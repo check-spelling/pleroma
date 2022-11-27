@@ -70,7 +70,7 @@ defmodule Pleroma.Web.ActivityPub.MRF.SimplePolicyTest do
     end
 
     test "has a matching host" do
-      clear_config([:mrf_simple, :media_nsfw], [{"remote.instance", "Whetever"}])
+      clear_config([:mrf_simple, :media_nsfw], [{"remote.instance", "Whatever"}])
       media_message = build_media_message()
       local_message = build_local_message()
 
