@@ -2269,7 +2269,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 #: lib/pleroma/docs/translator.ex:5
 msgctxt "config description at :pleroma-:mrf_hellthread > :delist_threshold"
-msgid "Number of mentioned users after which the message gets removed from timelines anddisables notifications. Set to 0 to disable."
+msgid "Number of mentioned users after which the message gets removed from timelines and disables notifications. Set to 0 to disable."
 msgstr ""
 
 #, elixir-autogen, elixir-format
