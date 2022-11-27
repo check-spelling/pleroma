@@ -62,7 +62,7 @@ config :pleroma, :mrf,
   policies: [Pleroma.Web.ActivityPub.MRF.SimplePolicy]
 
 config :pleroma, :mrf_simple,
-  media_removal: [{"illegalporn.biz", "Media can contain illegal contant"}],
+  media_removal: [{"illegalporn.biz", "Media can contain illegal content"}],
   media_nsfw: [{"porn.biz", "unmarked nsfw media"}, {"porn.business", "A lot of unmarked nsfw media"}],
   reject: [{"spam.com", "They keep spamming our users"}],
   federated_timeline_removal: [{"spam.university", "Annoying low-quality posts who otherwise fill up TWKN"}],
